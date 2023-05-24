@@ -1,7 +1,13 @@
 html {
   max-width: 720px;
+
+  background: blue;
 }
 
 body {
   background: #fff;
+}
+
+* {
+  color: red;
 }
