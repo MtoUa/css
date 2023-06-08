@@ -1,0 +1,11 @@
+<div class="nav{{#if isVertical}} nav_vertical{{else}} nav_inline{{/if}}">
+    {{#if isLight}}
+        {{#each list}}
+            <a href="{{url}}" class="nav_link nav_link_light">{{text}}</a>
+        {{/each}}
+    {{else}}
+        {{#each list}}
+            <a href="{{url}}" class="nav_link nav_link_default">{{text}}</a>
+        {{/each}}
+    {{/if}}
+</div>
