@@ -1,0 +1,14 @@
+<div class="card h-100">
+    <div class="card-header">
+        {{name}}
+    </div>
+    <div class="card-body">
+        <div class="plans_price">
+            <span class="plans_price_amount">{{price}}</span>
+        </div>
+        {{#each features}}
+            <div class="plans_features">{{.}}</div>
+        {{/each}}
+        <button class="btn btn-primary">{{button}}</button>
+    </div>
+</div>
