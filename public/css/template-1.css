@@ -116,9 +116,6 @@ body {
 
 .card-body {
   padding: 24px;
-}
-
-.plans_price {
   text-align: center;
 }
 
@@ -137,4 +134,24 @@ body {
   font-size: 29px;
   font-weight: 400;
   color: #6c757d;
+}
+
+.plans_features {
+  margin: 24px auto;
+}
+
+.plans_features_item {
+  font-size: 16px;
+  color: #212529;
+}
+
+.plans_features_item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+
+.card_button {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 9px;
 }

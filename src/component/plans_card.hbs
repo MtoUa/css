@@ -6,9 +6,11 @@
         <div class="plans_price">
             <span class="plans_price_amount">{{price}}</span>
         </div>
-        {{#each features}}
-            <div class="plans_features">{{.}}</div>
-        {{/each}}
-        <button class="btn btn-primary">{{button}}</button>
+        <div class="plans_features">
+            {{#each features}}
+                <div class="plans_features_item">{{.}}</div>
+            {{/each}}
+        </div>
+        <button class="btn {{#if @first}}btn-outline-primary {{else}}btn-primary {{/if}}card_button">{{button}}</button>
     </div>
 </div>
