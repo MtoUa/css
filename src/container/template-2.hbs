@@ -1,0 +1,79 @@
+<div class="page">
+	<div class="page_content">
+		<header class="header mb-80 row g-0">
+			<div class="col-3">
+				{{> logo}}
+			</div>
+			<nav class="header_nav col-9">
+				<div class="header_nav_right">
+					{{> nav list=header}}
+				</div>
+			</nav>
+		</header>
+
+		<section class="mb-80 hero">
+			{{#with hero}}
+				{{> hero}}
+				{{#with button}}
+					<a href="{{url}}" class="button">
+						{{text}}
+					</a>
+				{{/with}}
+			{{/with}}
+		</section>
+
+		<main>
+			<section class="mb-80 row g-4">
+				{{#each preview}}
+					<div class="col-6">
+						{{> preview_card}}
+					</div>
+				{{/each}}
+			</section>
+
+			<section class="posts_list_header row g-0">
+				<h2 class="col-6 posts_list_title">List of posts</h2>
+				<div class="col-6">
+					{{#each categories}}
+						<button class="button_category button_category-{{id}}">{{text}}</button>
+					{{/each}}
+				</div>
+			</section>
+
+			<section class="mb-80 row g-0">
+				<div class="col-7">
+					{{#each news}}
+						{{> news}}
+					{{/each}}
+				</div>
+				<aside class="col-5">
+					<div class="aside">
+						<div class="about">
+							<strong class="about_title">About</strong>
+							<p class="about_text">{{about}}</p>
+						</div>
+						{{> aside_list aside_list=archive aside_list_title='Archives'}}
+						{{> aside_list aside_list=social aside_list_title='Social'}}
+					</div>
+				</aside>
+			</section>
+		</main>
+
+		<footer class="footer row g-0">
+			<div class="col-3" style="margin-top: 4px;">
+				{{> logo}}
+				<span class="footer_copyright">
+					Copyright 2023-2024
+				</span>
+			</div>
+			{{#each footer}}
+				<div class="col-3">
+					<span class="footer_title">
+						{{title}}
+					</span>
+					{{> nav list=links isVertical=true isLight=true}}
+				</div>
+			{{/each}}
+		</footer>
+	</div>
+</div>
