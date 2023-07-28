@@ -15,7 +15,11 @@
 				{{text}}
 			</p>
 		</div>
-		<img src="{{photo}}" alt="Hero image" class="hero_image">
+		<div class="hero_slider">
+			<div class="hero_slider_icon hero_slider_left">{{left}}</div>
+			<img src="{{photo}}" alt="Hero image" class="hero_image">
+			<div class="hero_slider_icon hero_slider_right">{{right}}</div>
+		</div>
 	{{/with}}
 </section>
 
