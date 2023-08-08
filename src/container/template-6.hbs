@@ -1,0 +1,82 @@
+<header class="header">
+	{{> logo}}
+	<nav class="header_nav_right">
+		{{> nav list=header}}
+	</nav>
+</header>
+
+<main class="hero">
+	<div class="info">
+		{{#with info}}
+			<h1 class="info_title">{{title}}</h1>
+			<p class="info_text">{{description}}</p>
+		{{/with}}
+	</div>
+	<form class="form">
+		{{#with form}}
+			<div class="form_input_list">
+				{{#each inputs}}
+					<input id="form-input-{{id}}" name="{{name}}" placeholder="{{placeholder}}" type="{{type}}"
+						class="form_input">
+				{{/each}}
+			</div>
+			<div class="form_checkbox">
+				<input type="checkbox" name="{{checkbox.name}}" id="{{checkbox.name}}">
+				<div></div>
+				<label for="{{checkbox.name}}">{{checkbox.label}}</label>
+			</div>
+			<button type="submit" class="form_button">{{button}}</button>
+			<p class="form_info">{{info}}</p>
+		{{/with}}
+	</form>
+</main>
+
+<section class="updates">
+	{{#with updates}}
+		<strong class="updates_title">{{title}}</strong>
+		<div class="updates_list">
+			{{#each list}}
+				<div class="updates_list_item">
+					<div class="list_item_avatar"></div>
+					<div class="list_item_info">
+						<div class="list_item_nickname">{{nickname}}</div>
+						<p class="list_item_text">{{description}}</p>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+		<a href="{{show_all.url}}" class="show_all">{{show_all.text}}</a>
+	{{/with}}
+</section>
+
+<section class="exp">
+	{{#with expirience}}
+		<h2 class="exp_title">{{title}}</h2>
+		<span class="exp_badge">{{badge}}</span>
+		<div class="exp_list">
+			{{#each list}}
+				<div class="exp_list_item">
+					<strong class="exp_list_item_name">{{name}}</strong>
+					<p class="exp_list_item_details">{{details}}</p>
+				</div>
+			{{/each}}
+		</div>
+	{{/with}}
+</section>
+
+<footer class="footer">
+	<div class="copyright">
+		{{> logo}}
+		<span class="copyright_text">
+			Copyright 2023-2024
+		</span>
+	</div>
+	{{#each footer}}
+		<div>
+			<span class="footer_title">
+				{{title}}
+			</span>
+			{{> nav list=links isVertical=true isLight=true}}
+		</div>
+	{{/each}}
+</footer>
