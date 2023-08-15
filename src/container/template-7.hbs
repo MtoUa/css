@@ -1,0 +1,16 @@
+<main>
+    <section class="hero">
+        {{#with hero}}
+            <h1 class="hero_title">{{title}}</h1>
+            <p class="hero_text">{{description}}</p>
+            <a href="{{button.url}}" class="hero_button">{{button.text}}</a>
+        {{/with}}
+    </section>
+
+    <section class="about">
+        {{#with about}}
+            <strong class="about_title">{{heading}}</strong>
+            <p class="about_text">{{info}}</p>
+        {{/with}}
+    </section>
+</main>
