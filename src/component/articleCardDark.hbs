@@ -1,0 +1,13 @@
+<div id="{{id}}" class="card">
+    <div class="card_content">
+        <div class="image_container">
+            <img src="{{photo}}" alt="{{name}}" class="card_image">
+            {{#if isNew}}
+                <span class="badge_isNew">New</span>
+            {{/if}}
+        </div>
+        <strong class="card_title">{{name}}</strong>
+        <p class="card_text">{{description}}</p>
+    </div>
+    <button class="card_button">Read All</button>
+</div>

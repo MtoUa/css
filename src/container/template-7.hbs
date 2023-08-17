@@ -13,4 +13,16 @@
             <p class="about_text">{{info}}</p>
         {{/with}}
     </section>
+
+    <section class="articles">
+        <div class="articles_topRow">
+            <h2 class="articles_title">Our Articles</h2>
+            <button class="articles_viewAll">View All</button>
+        </div>
+        <div class="articles_cards">
+            {{#each articles}}
+                {{> articleCardDark}}
+            {{/each}}
+        </div>
+    </section>
 </main>
